@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Example from './App';
+import Navegador from './Navegador';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
   <React.Fragment>
-    <Example />
+    <Navegador />
   </React.Fragment>,
   document.getElementById('root')
 );

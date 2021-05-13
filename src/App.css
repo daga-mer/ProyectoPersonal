@@ -8,3 +8,25 @@ footer{
     background-color: black; 
     color: white;
 }
+#dado{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin-left: 50%;
+    justify-content: space-around;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+#dado div{
+    background-color: black;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    align-self: center;
+}
+.nav-item{
+    margin-left: 1%;
+    margin-right: 1%;
+}

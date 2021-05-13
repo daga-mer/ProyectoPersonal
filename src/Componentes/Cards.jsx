@@ -4,7 +4,7 @@ import { Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle } from 'reac
 const CardS = (props) => {
 
     return (
-        <Card style={{ textAlign: 'justify', margin:'0%', background:'transparent', color:'white' }}>
+        <Card style={{ textAlign: 'justify', margin:'2%', background:'transparent', color:'white' }}>
             <CardImg src={props.Img} alt="Card image cap" />
             <CardBody>
                 <CardTitle tag="h5">
