@@ -149,7 +149,7 @@ const App = (props) => {
           <a href="mailto:almanzad404@gmail.com" rel="noreferrer" target="_blank">
             <img src={Gmail} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  Correo electronico</a>
 
-          <a href="http://www.linkedin.com/in/daniel-alejandro-gonzalez-almanza-66141720a" rel="noreferrer" target="_blank">
+          <a href="https://www.linkedin.com/in/daniel-alejandro-gonzalez-almanza-66141720a/?originalSubdomain=co" rel="noreferrer" target="_blank">
             <img src={LinKedin} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  LinKedin</a>
         </div>
       </footer>
