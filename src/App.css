@@ -5,13 +5,17 @@
 }
 footer{
     text-align: center; 
-    background-color: black; 
-    color: white;
+    background-color: #262626; 
 }
-nav{
-    background-color:black; 
-    z-index:10;
-    position: fixed;
+footer a{
+    color: #D9D9D9;
+}
+.navbar{
+    background-color:#262626;
+    position: fixed!important;
+    z-index: 100;
+    width: 100%;
+    text-align: center;
 }
 ul{
     list-style: none;
@@ -20,4 +24,11 @@ ul{
 li{
     display: inline; 
     padding: 0px 124px 0px 124px;
+}
+#Bienvenida{
+    text-align: center;
+    background-color: #ffff;
+}
+.card-group>.card{
+    margin-bottom: 0% !important;
 }
