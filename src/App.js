@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CardGroup, Jumbotron, Button, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import Reloj from "./Componentes/Reloj";
 import LinKedin from './IMGS/linkedin-icon.svg';
 import Angular from './IMGS/angular-icon.svg';
 import Bootstrap from './IMGS/bootstrap.svg';
@@ -15,14 +16,14 @@ import PHP from './IMGS/php.svg';
 import JS from './IMGS/javascript.svg';
 import './App.css';
 
-const App = (props) => {
+const App = () => {
 
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   const styles = {
-    estilos:{
+    estilos: {
       textAlign: 'center',
       backgroundColor: '#000',
       margin: 0,
@@ -40,10 +41,13 @@ const App = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink style={{ color: '#D9D9D9' }} href="#Tech">Tecnologías que manejo</NavLink>
+              <NavLink style={{ color: '#D9D9D9' }} href="#Tech">Tecnologías</NavLink>
             </NavItem>
             <NavItem>
               <NavLink style={{ color: '#D9D9D9' }} href="#Contacto">Contacto</NavLink>
+            </NavItem>
+            <NavItem style={{ color: '#D9D9D9' }}>
+              <Reloj />
             </NavItem>
           </Nav>
         </Collapse>
@@ -57,11 +61,11 @@ const App = (props) => {
           resido en el municipio de Soacha. Conozco diversidad de lenguajes y
           herrramientas con las que puedo llegar a desempeñar mi labor de la mejor
           manera.
-          <br/>
-          Aqui hay un link a mi repositorio de trabajos en la página de 
-          <a style={{marginLeft:'10px'}} href='https://github.com/daga-mer' rel="noreferrer" target="_blank">
+          <br />
+          Aqui hay un link a mi repositorio de trabajos en la página de
+          <a style={{ marginLeft: '10px' }} href='https://github.com/daga-mer' rel="noreferrer" target="_blank">
             <img src={GitHub} alt="" width='25px' height='25px' style={{ backgroundColor: "white", borderRadius: "100px" }} /> GitHub
-            </a>
+          </a>
         </p>
       </Jumbotron>
 
@@ -74,7 +78,7 @@ const App = (props) => {
 
       <h1 style={{ textAlign: 'center', backgroundColor: '#000', margin: 0, color: 'white' }}>
         Tecnologias y herramientas que manejo
-        </h1>
+      </h1>
 
       <h2 style={styles.estilos}>Tecnologias que manejo a un nivel medio</h2>
 
@@ -144,7 +148,7 @@ const App = (props) => {
         <h4 style={{ color: '#D9D9D9' }}>Medios de comunicación</h4>
 
         <div style={{ margin: '0%', paddingBottom: '2%' }}>
-          <p style={{color:'white'}}>Numero de telefono movil: +57 3157403766</p>
+          <p style={{ color: 'white' }}>Numero de telefono movil: +57 3157403766</p>
 
           <a href="mailto:almanzad404@gmail.com" rel="noreferrer" target="_blank">
             <img src={Gmail} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  Correo electronico</a>
