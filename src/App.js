@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { CardGroup, Jumbotron, Button, Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
+import React, {useState} from 'react';
+import { CardGroup, Collapse, Jumbotron, NavbarToggler, Navbar, NavbarText, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
 import Reloj from "./Componentes/Reloj";
 import LinKedin from './IMGS/linkedin-icon.svg';
 import Angular from './IMGS/angular-icon.svg';
@@ -35,21 +35,26 @@ const App = () => {
 
   return (
     <div>
-      <Navbar color="black" light expand="md">
-        <NavbarBrand href="#Bienvenida" style={{ color: '#D9D9D9' }}>Bienvenida</NavbarBrand>
+      <Navbar color="black" light expand="md" id='nav'>
+        <NavbarBrand href="#Bienvenida">
+          Bienvenida
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink style={{ color: '#D9D9D9' }} href="#Tech">Tecnologías</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink style={{ color: '#D9D9D9' }} href="#Contacto">Contacto</NavLink>
-            </NavItem>
-            <NavItem style={{ color: '#D9D9D9' }}>
-              <Reloj />
-            </NavItem>
-          </Nav>
+        <Nav className="mr-auto" navbar>
+          <NavItem>
+            <NavLink href="#Tech">Tecnologías</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#Ptiempos">Pasatiempos</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavLink href="#Contacto">Contacto</NavLink>
+          </NavItem>
+          <NavItem>
+            <NavbarText><Reloj /></NavbarText>
+          </NavItem>
+        </Nav>
         </Collapse>
       </Navbar>
 
@@ -65,7 +70,7 @@ const App = () => {
           Aqui hay un link a mi repositorio de trabajos en la página de
           <a style={{ marginLeft: '10px' }} href='https://github.com/daga-mer' rel="noreferrer" target="_blank">
             <img src={GitHub} alt="" width='25px' height='25px' style={{ backgroundColor: "white", borderRadius: "100px" }} /> GitHub
-          </a>
+          </a>.
         </p>
       </Jumbotron>
 
@@ -132,9 +137,17 @@ const App = () => {
         </svg>
       </div>
 
-      <Button style={{ marginLeft: '40%', marginRight: '40%', borderRadius: '50px' }} color="primary" onClick={() => { window.open("https://drive.google.com/file/d/1CTI-4c47ImBjL2y2gJ90R2owXIG-pkA5/view?usp=sharing") }}>
-        Descarga mi Hoja de vida
-      </Button>
+      <h1 id='Ptiempos' style={{ textAlign: 'center' }}>Pasatiempos</h1>
+
+      <ul style={{listStyleType:'upper-roman'}}>
+        <li>Videojuegos.🎮</li>
+        <li>Aprender nuevas tecnologías fuera de mi enfoque.🤓<br/>
+        <b>Ej:</b> Lenguajes como: C++, JAVA, SQL; Diseño web, etc.</li>
+        <li>Rehacer o modificar proyectos antiguos.🖥</li>
+        <li>Iniciar proyectos nuevos con tecnologías ya conocidas.🖥</li>
+        <li>Informarme sobre el avance tecnológico en todo el mundo.🤓</li>
+        <li>Escuchar música, especialmente: Rap, salsa, merengue, etc.🎧</li>
+      </ul>
 
       <div style={{ height: '150px', overflow: 'hidden' }} >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}>
@@ -145,7 +158,7 @@ const App = () => {
 
       <footer id='Contacto'>
 
-        <h4 style={{ color: '#D9D9D9' }}>Medios de comunicación</h4>
+        <h4 >Medios de comunicación</h4>
 
         <div style={{ margin: '0%', paddingBottom: '2%' }}>
           <p style={{ color: 'white' }}>Numero de telefono movil: +57 3157403766</p>
@@ -157,7 +170,6 @@ const App = () => {
             <img src={LinKedin} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  LinKedin</a>
         </div>
       </footer>
-
     </div >
   );
 };

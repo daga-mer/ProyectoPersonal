@@ -1,29 +1,23 @@
-#logo{
-    text-align: center;
-    display: block;
-    margin-top: 10px;
-}
 footer{
     text-align: center; 
     background-color: #262626; 
 }
-footer a{
+footer a, footer h4, #nav ul a, #nav a, #nav span{
     color: #D9D9D9;
 }
-.navbar{
+#nav{
     background-color:#262626;
     position: fixed!important;
     z-index: 100;
     width: 100%;
     text-align: center;
 }
-ul{
+#nav ul{
     list-style: none;
-    padding-top: 5px;
 }
-li{
+#nav li{
     display: inline; 
-    padding: 0px 124px 0px 124px;
+    padding: 0px 64px 0px 64px;
 }
 #Bienvenida{
     text-align: center;
