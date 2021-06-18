@@ -4,8 +4,8 @@ import React from 'react';
 const CardS = (props) => {
 
     return (
-        <Card style={{ textAlign: 'justify', background:'transparent', color:'white' }}>
-            <CardImg src={props.Img} alt="Card image cap" style={{width:'320px', alignSelf:'center'}} />
+        <Card style={{ textAlign: 'justify', background: 'transparent', color: 'white' }}>
+            <CardImg src={props.Img} alt="Card image cap" style={{ width: '320px', alignSelf: 'center' }} />
             <CardBody>
                 <CardTitle tag="h5">
                     {props.Title}

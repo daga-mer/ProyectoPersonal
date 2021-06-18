@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import { CardGroup, Collapse, Jumbotron, NavbarToggler, Navbar, NavbarText, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-import Reloj from "./Componentes/Reloj";
+import React from 'react';
+import { CardGroup, Jumbotron } from 'reactstrap';
+import NavBar from "./Componentes/Nav";
 import LinKedin from './IMGS/linkedin-icon.svg';
 import Angular from './IMGS/angular-icon.svg';
 import Bootstrap from './IMGS/bootstrap.svg';
@@ -15,17 +15,13 @@ import CSS3 from './IMGS/css-3.svg';
 import PHP from './IMGS/php.svg';
 import JS from './IMGS/javascript.svg';
 import './App.css';
+import 'animate.css';
 
 const App = () => {
-
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
 
   const styles = {
     estilos: {
       textAlign: 'center',
-      backgroundColor: '#000',
       margin: 0,
       color: 'white',
       paddingTop: '20px',
@@ -35,28 +31,7 @@ const App = () => {
 
   return (
     <div>
-      <Navbar color="black" light expand="md" id='nav'>
-        <NavbarBrand href="#Bienvenida">
-          Bienvenida
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-        <Nav className="mr-auto" navbar>
-          <NavItem>
-            <NavLink href="#Tech">Tecnologías</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#Ptiempos">Pasatiempos</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavLink href="#Contacto">Contacto</NavLink>
-          </NavItem>
-          <NavItem>
-            <NavbarText><Reloj /></NavbarText>
-          </NavItem>
-        </Nav>
-        </Collapse>
-      </Navbar>
+      <NavBar />
 
       <Jumbotron id='Bienvenida'>
         <h1 style={{ marginTop: '50px' }}>Bienvenido</h1>
@@ -80,56 +55,59 @@ const App = () => {
           </path>
         </svg>
       </div>
+      
+      <div style={{backgroundColor:'#000000'}}>
+        <h1 className='Titulo' style={{ textAlign: 'center', margin: 0, color: 'white' }}>
+          Tecnologias y herramientas que manejo
+        </h1>
 
-      <h1 style={{ textAlign: 'center', backgroundColor: '#000', margin: 0, color: 'white' }}>
-        Tecnologias y herramientas que manejo
-      </h1>
+        <h2 style={styles.estilos}>Tecnologias que manejo a un nivel medio</h2>
 
-      <h2 style={styles.estilos}>Tecnologias que manejo a un nivel medio</h2>
+        <CardGroup >
+          <CardS
+            Img={HTML5}
+          />
+          <CardS
+            Img={CSS3}
+          />
+          <CardS
+            Img={JS}
+          />
+        </CardGroup>
 
-      <CardGroup style={{ backgroundColor: '#000' }}>
-        <CardS
-          Img={HTML5}
-        />
-        <CardS
-          Img={CSS3}
-        />
-        <CardS
-          Img={JS}
-        />
-      </CardGroup>
+        <CardGroup >
+          <CardS
+            Img={REACT}
+          />
+        </CardGroup>
 
-      <CardGroup style={{ backgroundColor: '#000' }}>
-        <CardS
-          Img={REACT}
-        />
-      </CardGroup>
+        <h2 style={styles.estilos}>Tecnologias que manejo a un nivel bajo</h2>
 
-      <h2 style={styles.estilos}>Tecnologias que manejo a un nivel bajo</h2>
+        <CardGroup >
+          <CardS
+            Img={Angular}
+          />
+          <CardS
+            Img={PHP}
+          />
+          <CardS
+            Img={MySQL}
+          />
+        </CardGroup>
 
-      <CardGroup style={{ backgroundColor: '#000' }}>
-        <CardS
-          Img={Angular}
-        />
-        <CardS
-          Img={PHP}
-        />
-        <CardS
-          Img={MySQL}
-        />
-      </CardGroup>
+        <h2 style={styles.estilos}>Herramientas</h2>
 
-      <h2 style={styles.estilos}>Herramientas</h2>
+        <CardGroup >
+          <CardS
+            Img={Bootstrap}
+          />
+          <CardS
+            Img={Git}
+          />
+        </CardGroup>
 
-      <CardGroup style={{ backgroundColor: '#000' }}>
-        <CardS
-          Img={Bootstrap}
-        />
-        <CardS
-          Img={Git}
-        />
-      </CardGroup>
-
+      </div>
+      
       <div style={{ height: '150px', overflow: 'hidden' }} >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}>
           <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{ stroke: 'none', fill: '#000' }}>
@@ -137,12 +115,12 @@ const App = () => {
         </svg>
       </div>
 
-      <h1 id='Ptiempos' style={{ textAlign: 'center' }}>Pasatiempos</h1>
+      <h1 className='Titulo' id='Ptiempos' style={{ textAlign: 'center' }}>Pasatiempos</h1>
 
-      <ul style={{listStyleType:'upper-roman'}}>
+      <ul style={{ listStyleType: 'upper-roman' }}>
         <li>Videojuegos.🎮</li>
-        <li>Aprender nuevas tecnologías fuera de mi enfoque.🤓<br/>
-        <b>Ej:</b> Lenguajes como: C++, JAVA, SQL; Diseño web, etc.</li>
+        <li>Aprender nuevas tecnologías fuera de mi enfoque.🤓<br />
+          <b>Ej:</b> Lenguajes como: C++, JAVA, SQL; Diseño web, etc.</li>
         <li>Rehacer o modificar proyectos antiguos.🖥</li>
         <li>Iniciar proyectos nuevos con tecnologías ya conocidas.🖥</li>
         <li>Informarme sobre el avance tecnológico en todo el mundo.🤓</li>
@@ -158,10 +136,10 @@ const App = () => {
 
       <footer id='Contacto'>
 
-        <h4 >Medios de comunicación</h4>
+        <h4 className='Titulo' >Medios de comunicación</h4>
 
         <div style={{ margin: '0%', paddingBottom: '2%' }}>
-          <p style={{ color: 'white' }}>Numero de telefono movil: +57 3157403766</p>
+          <p style={{ color: 'white' }}>Número de telefono movil: +57 3157403766</p>
 
           <a href="mailto:almanzad404@gmail.com" rel="noreferrer" target="_blank">
             <img src={Gmail} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  Correo electronico</a>
