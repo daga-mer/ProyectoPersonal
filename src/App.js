@@ -1,19 +1,22 @@
 import React from 'react';
 import { CardGroup, Jumbotron } from 'reactstrap';
 import NavBar from "./Componentes/Nav";
+import presentacion from './IMGS/presentacion.svg';
 import LinKedin from './IMGS/linkedin-icon.svg';
-import Angular from './IMGS/angular-icon.svg';
 import Bootstrap from './IMGS/bootstrap.svg';
-import GitHub from './IMGS/github-icon.svg';
 import Gmail from './IMGS/google-gmail.svg';
+import GitHub from './IMGS/github-icon.svg';
+import contact from './IMGS/Contact.svg';
 import CardS from './Componentes/Cards';
+import JS from './IMGS/javascript.svg';
 import Git from './IMGS/git-icon.svg';
-import REACT from './IMGS/react.svg';
 import HTML5 from './IMGS/html-5.svg';
-import MySQL from './IMGS/mysql.svg';
+import relax from './IMGS/relax.svg';
+import REACT from './IMGS/react.svg';
 import CSS3 from './IMGS/css-3.svg';
 import PHP from './IMGS/php.svg';
-import JS from './IMGS/javascript.svg';
+import ModalC from "./Componentes/ModalC";
+import ModalC2 from "./Componentes/ModalC2";
 import './App.css';
 import 'animate.css';
 
@@ -26,14 +29,33 @@ const App = () => {
       color: 'white',
       paddingTop: '20px',
       paddingBottom: '20px'
+    },
+    ImgP: {
+      animation: 'bounce',
+      'animation-duration': '1s',
+      float: 'left',
+      margin: '1%'
+    },
+    ImgR: {
+      animation: 'bounce',
+      'animation-duration': '1s',
+      float: 'right',
+      margin: '1%'
+    },
+    ImgF: {
+      animation: 'bounce',
+      'animation-duration': '1s',
+      float: 'left',
     }
   };
+
 
   return (
     <div>
       <NavBar />
 
       <Jumbotron id='Bienvenida'>
+        <img style={styles.ImgP} src={presentacion} width='25%' alt="presentacion" />
         <h1 style={{ marginTop: '50px' }}>Bienvenido</h1>
         <p>
           Mucho gusto, mi nombre es Daniel soy un joven colombiano desarrollador
@@ -49,19 +71,30 @@ const App = () => {
         </p>
       </Jumbotron>
 
+      <div style={{textAlign:'center'}}>
+        <ModalC
+          buttonLabel='Ver certificados SENA'
+        />
+        
+        <ModalC2
+          buttonLabel='Ver otros certificados'
+        />
+      </div>
+
+
       <div id='Tech' style={{ height: '150px', overflow: 'hidden' }} >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}>
           <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={{ stroke: 'none', fill: '#000' }}>
           </path>
         </svg>
       </div>
-      
-      <div style={{backgroundColor:'#000000'}}>
+
+      <div style={{ backgroundColor: '#000000' }}>
         <h1 className='Titulo' style={{ textAlign: 'center', margin: 0, color: 'white' }}>
           Tecnologias y herramientas que manejo
         </h1>
 
-        <h2 style={styles.estilos}>Tecnologias que manejo a un nivel medio</h2>
+        <h2 style={styles.estilos}>Principales tecnologias que manejo</h2>
 
         <CardGroup >
           <CardS
@@ -79,19 +112,8 @@ const App = () => {
           <CardS
             Img={REACT}
           />
-        </CardGroup>
-
-        <h2 style={styles.estilos}>Tecnologias que manejo a un nivel bajo</h2>
-
-        <CardGroup >
-          <CardS
-            Img={Angular}
-          />
           <CardS
             Img={PHP}
-          />
-          <CardS
-            Img={MySQL}
           />
         </CardGroup>
 
@@ -107,7 +129,7 @@ const App = () => {
         </CardGroup>
 
       </div>
-      
+
       <div style={{ height: '150px', overflow: 'hidden' }} >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}>
           <path d="M0.00,49.98 C149.99,150.00 271.49,-49.98 500.00,49.98 L500.00,0.00 L0.00,0.00 Z" style={{ stroke: 'none', fill: '#000' }}>
@@ -115,19 +137,22 @@ const App = () => {
         </svg>
       </div>
 
-      <h1 className='Titulo' id='Ptiempos' style={{ textAlign: 'center' }}>Pasatiempos</h1>
+      <div>
+        <h1 className='Titulo' id='Ptiempos' style={{ textAlign: 'center' }}>Pasatiempos</h1>
 
-      <ul style={{ listStyleType: 'upper-roman' }}>
-        <li>Videojuegos.🎮</li>
-        <li>Aprender nuevas tecnologías fuera de mi enfoque.🤓<br />
-          <b>Ej:</b> Lenguajes como: C++, JAVA, SQL; Diseño web, etc.</li>
-        <li>Rehacer o modificar proyectos antiguos.🖥</li>
-        <li>Iniciar proyectos nuevos con tecnologías ya conocidas.🖥</li>
-        <li>Informarme sobre el avance tecnológico en todo el mundo.🤓</li>
-        <li>Escuchar música, especialmente: Rap, salsa, merengue, etc.🎧</li>
-      </ul>
+        <img src={relax} style={styles.ImgR} alt='relax' width='32%' />
+        <ul style={{ listStyleType: 'upper-roman' }}>
+          <li>Videojuegos.🎮</li>
+          <li>Aprender nuevas tecnologías fuera de mi enfoque.🤓<br />
+            <b>Ej:</b> Lenguajes como: C++, JAVA, SQL; Diseño web, etc.</li>
+          <li>Rehacer o modificar proyectos antiguos.🖥</li>
+          <li>Iniciar proyectos nuevos con tecnologías ya conocidas.🖥</li>
+          <li>Informarme sobre el avance tecnológico en todo el mundo.🤓</li>
+          <li>Escuchar música, especialmente: Rap, salsa, merengue, etc.🎧</li>
+        </ul>
+      </div>
 
-      <div style={{ height: '150px', overflow: 'hidden' }} >
+      <div style={{ height: '150px'}} >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}>
           <path d="M0.00,49.98 C149.99,150.00 349.20,-49.98 500.00,49.98 L500.00,150.00 L0.00,150.00 Z" style={{ stroke: 'none', fill: '#262626' }}>
           </path>
@@ -135,6 +160,7 @@ const App = () => {
       </div>
 
       <footer id='Contacto'>
+        <img src={contact} style={styles.ImgF} alt='relax' width='20%' />
 
         <h4 className='Titulo' >Medios de comunicación</h4>
 

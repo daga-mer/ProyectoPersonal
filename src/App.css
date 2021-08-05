@@ -35,20 +35,6 @@ footer a, footer h4, #nav ul a, #nav a, #nav span {
   background-color: #ffff;
 }
 
-#Bienvenida:hover {
-  -webkit-animation: bounce;
-          animation: bounce;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
-.Titulo:hover {
-  -webkit-animation: fadeIn;
-          animation: fadeIn;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-}
-
 .card-group .card {
   margin-bottom: 0% !important;
 }
