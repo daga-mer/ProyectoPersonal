@@ -1,24 +1,12 @@
 import React from 'react';
 import { CardGroup, Jumbotron } from 'reactstrap';
-import NavBar from "./Componentes/Nav";
-import presentacion from './IMGS/presentacion.svg';
-import LinKedin from './IMGS/linkedin-icon.svg';
-import Bootstrap from './IMGS/bootstrap.svg';
-import Gmail from './IMGS/google-gmail.svg';
-import GitHub from './IMGS/github-icon.svg';
-import contact from './IMGS/Contact.svg';
-import CardS from './Componentes/Cards';
-import JS from './IMGS/javascript.svg';
-import Git from './IMGS/git-icon.svg';
-import HTML5 from './IMGS/html-5.svg';
-import relax from './IMGS/relax.svg';
-import REACT from './IMGS/react.svg';
-import CSS3 from './IMGS/css-3.svg';
-import PHP from './IMGS/php.svg';
-import ModalC from "./Componentes/ModalC";
 import ModalC2 from "./Componentes/ModalC2";
-import './App.css';
+import ModalC from "./Componentes/ModalC";
+import CardS from "./Componentes/Cards";
+import Array1 from "./Componentes/Imgs";
+import NavBar from "./Componentes/Nav";
 import 'animate.css';
+import './App.css';
 
 const App = () => {
 
@@ -32,30 +20,29 @@ const App = () => {
     },
     ImgP: {
       animation: 'bounce',
-      'animation-duration': '1s',
+      animationDuration: '1s',
       float: 'left',
       margin: '1%'
     },
     ImgR: {
       animation: 'bounce',
-      'animation-duration': '1s',
+      animationDuration: '1s',
       float: 'right',
       margin: '1%'
     },
     ImgF: {
       animation: 'bounce',
-      'animation-duration': '1s',
+      animationDuration: '1s',
       float: 'left',
     }
   };
 
-
   return (
-    <div>
+    <>
       <NavBar />
 
       <Jumbotron id='Bienvenida'>
-        <img style={styles.ImgP} src={presentacion} width='25%' alt="presentacion" />
+        <img style={styles.ImgP} src={Array1[0]} width='25%' alt="presentacion" />
         <h1 style={{ marginTop: '50px' }}>Bienvenido</h1>
         <p>
           Mucho gusto, mi nombre es Daniel soy un joven colombiano desarrollador
@@ -66,7 +53,7 @@ const App = () => {
           <br />
           Aqui hay un link a mi repositorio de trabajos en la página de
           <a style={{ marginLeft: '10px' }} href='https://github.com/daga-mer' rel="noreferrer" target="_blank">
-            <img src={GitHub} alt="" width='25px' height='25px' style={{ backgroundColor: "white", borderRadius: "100px" }} /> GitHub
+            <img src={Array1[1]} alt="" width='25px' height='25px' style={{ backgroundColor: "white", borderRadius: "100px" }} /> GitHub
           </a>.
         </p>
       </Jumbotron>
@@ -80,7 +67,6 @@ const App = () => {
           buttonLabel='Ver otros certificados'
         />
       </div>
-
 
       <div id='Tech' style={{ height: '150px', overflow: 'hidden' }} >
         <svg viewBox="0 0 500 150" preserveAspectRatio="none" style={{ height: '100%', width: '100%' }}>
@@ -98,22 +84,22 @@ const App = () => {
 
         <CardGroup >
           <CardS
-            Img={HTML5}
+            Img={Array1[2]}
           />
           <CardS
-            Img={CSS3}
+            Img={Array1[3]}
           />
           <CardS
-            Img={JS}
+            Img={Array1[4]}
           />
         </CardGroup>
 
         <CardGroup >
           <CardS
-            Img={REACT}
+            Img={Array1[5]}
           />
           <CardS
-            Img={PHP}
+            Img={Array1[6]}
           />
         </CardGroup>
 
@@ -121,13 +107,12 @@ const App = () => {
 
         <CardGroup >
           <CardS
-            Img={Bootstrap}
+            Img={Array1[7]}
           />
           <CardS
-            Img={Git}
+            Img={Array1[8]}
           />
         </CardGroup>
-
       </div>
 
       <div style={{ height: '150px', overflow: 'hidden' }} >
@@ -140,7 +125,7 @@ const App = () => {
       <div>
         <h1 className='Titulo' id='Ptiempos' style={{ textAlign: 'center' }}>Pasatiempos</h1>
 
-        <img src={relax} style={styles.ImgR} alt='relax' width='32%' />
+        <img src={Array1[9]} style={styles.ImgR} alt='relax' width='32%' />
         <ul style={{ listStyleType: 'upper-roman' }}>
           <li>Videojuegos.🎮</li>
           <li>Aprender nuevas tecnologías fuera de mi enfoque.🤓<br />
@@ -160,7 +145,7 @@ const App = () => {
       </div>
 
       <footer id='Contacto'>
-        <img src={contact} style={styles.ImgF} alt='relax' width='20%' />
+        <img src={Array1[10]} style={styles.ImgF} alt='relax' width='20%' />
 
         <h4 className='Titulo' >Medios de comunicación</h4>
 
@@ -168,13 +153,13 @@ const App = () => {
           <p style={{ color: 'white' }}>Número de telefono movil: +57 3157403766</p>
 
           <a href="mailto:almanzad404@gmail.com" rel="noreferrer" target="_blank">
-            <img src={Gmail} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  Correo electronico</a>
+            <img src={Array1[11]} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  Correo electronico</a>
 
           <a href="https://www.linkedin.com/in/daniel-alejandro-gonzalez-almanza-66141720a/?originalSubdomain=co" rel="noreferrer" target="_blank">
-            <img src={LinKedin} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  LinKedin</a>
+            <img src={Array1[12]} alt="" width='25px' height='25px' style={{ marginLeft: '10px' }} />  LinKedin</a>
         </div>
       </footer>
-    </div >
+    </ >
   );
 };
 
