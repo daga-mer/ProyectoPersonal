@@ -11,13 +11,13 @@ export default function NavBar () {
     const toggle = () => setIsOpen(!isOpen);
 
     return (
-        <Navbar color="black" light expand="md" id='nav'>
+        <Navbar color="black" light expand="sm" id='nav'>
             <NavbarBrand href="#Bienvenida">
                 Bienvenida
             </NavbarBrand>
             <NavbarToggler onClick={toggle} />
             <Collapse isOpen={isOpen} navbar>
-                <Nav className="mr-auto" navbar>
+                <Nav navbar>
                     <NavItem>
                         <NavLink href="#Tech">Tecnologías</NavLink>
                     </NavItem>

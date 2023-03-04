@@ -14,28 +14,83 @@ footer a, footer h4, #nav ul a, #nav a, #nav span {
   width: 100%;
   text-align: center;
 }
-
 #nav .nav-item a:hover {
   background-color: #fff;
   border-radius: 20px;
   color: #000;
 }
-
 #nav ul {
   list-style: none;
 }
-
 #nav ul li {
   display: inline;
-  padding: 0px 64px 0px 64px;
 }
 
 #Bienvenida {
   text-align: center;
-  background-color: #ffff;
+  background-color: white;
 }
 
 .card-group .card {
   margin-bottom: 0% !important;
 }
-/*# sourceMappingURL=App.css.map */
+
+@media only screen and (min-width: 600px) {
+  img#pc {
+    display: none;
+  }
+  img#cel {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 600px) {
+  #nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #nav ul li {
+    display: inline;
+  }
+  img#pc {
+    display: none;
+  }
+  img#cel {
+    display: flex;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #nav ul li {
+    display: inline;
+  }
+  img#pc {
+    display: flex;
+  }
+  img#cel {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  #nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  #nav ul li {
+    display: inline;
+  }
+  img#pc {
+    display: flex;
+  }
+  img#cel {
+    display: none;
+  }
+}/*# sourceMappingURL=App.css.map */

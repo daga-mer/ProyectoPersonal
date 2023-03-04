@@ -18,20 +18,72 @@ footer a, footer h4, #nav ul a, #nav a, #nav span
                 background-color: #fff
                 border-radius: 20px
                 color: #000
-
-#nav
     ul
         list-style: none
         li
             display: inline
-            padding: 0px 64px 0px 64px
 
 #Bienvenida
     text-align: center
     background-color: #ffff
 
-.Titulo
 
 .card-group
     .card
         margin-bottom: 0% !important
+
+@media only screen and (min-width: 600px) 
+    img#pc
+        display: none
+    img#cel
+        display: flex
+
+
+@media only screen and (min-width: 600px) 
+    #nav
+        ul
+            list-style: none
+            display: flex
+            justify-content: space-between
+            width: 100%
+            li
+                display: inline
+
+    img#pc
+        display: none
+    img#cel
+        display: flex
+
+
+@media only screen and (min-width: 1024px) 
+    #nav
+        ul
+            list-style: none
+            display: flex
+            justify-content: space-between
+            width: 100%
+            li
+                display: inline
+    
+    img#pc
+        display: flex
+    img#cel
+        display: none
+
+@media only screen and (min-width: 1440px) 
+    #nav
+        ul
+            list-style: none
+            display: flex
+            justify-content: space-between
+            width: 100%
+            li
+                display: inline
+    
+    img#pc
+        display: flex
+    img#cel
+        display: none
+        
+
+    
