@@ -12,9 +12,9 @@ import React from "../IMGS/react.svg";
 import Css from "../IMGS/css-3.svg";
 import Php from "../IMGS/php.svg";
 
-var Array1 = [
+var Imagenes = [
     present, github, Html, Css, JavaScript, Php, React, Git, bootstrap, Relax,
     Contact, gmail, linkedin
 ]
 
-export default Array1;
+export default Imagenes;

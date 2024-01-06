@@ -1,25 +1,101 @@
+.card_1 {
+  box-shadow: rgb(141, 141, 141) 0px 0px 30px;
+  display: flex !important;
+  flex-direction: column;
+  margin: 15px;
+  width: 15rem;
+  align-items: center;
+}
+
+.inputNombreUsuario, .inputComentarioUsuario {
+  margin: auto;
+  border: 3px solid rgba(160, 160, 160, 0.3882352941) !important;
+  border-radius: 1rem !important;
+}
+
+.inputNombreUsuario.form-control.is-invalid, .inputComentarioUsuario.form-control.is-invalid {
+  border: 3px solid #dc3545 !important;
+}
+
+.ListaComentarios {
+  justify-content: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ListaComentarios > h1, h2, h3, h4, h5, h6, p {
+  margin: 0 !important;
+}
+
+.inputNombreUsuario {
+  width: auto !important;
+}
+
+.inputComentarioUsuario {
+  width: 45% !important;
+}
+
+.divComentario {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgba(192, 192, 192, 0.2392156863);
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.tituloComentario {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.fechaCreacion {
+  font-size: 0.7rem;
+  color: #787878;
+  font-weight: 600;
+}
+
+.comentario {
+  font-size: 0.95rem;
+  font-weight: 400;
+}
+
 footer {
   text-align: center;
   background-color: #262626;
+  margin-top: 1rem;
 }
 
 footer a, footer h4, #nav ul a, #nav a, #nav span {
   color: #D9D9D9;
 }
 
+#Contacto {
+  display: flex;
+  justify-content: space-around;
+}
+
 #nav {
+  padding-bottom: 3rem;
   background-color: #262626;
-  position: fixed !important;
   z-index: 100;
   width: 100%;
   text-align: center;
 }
 #nav .nav-item a:hover {
+  text-decoration: none;
+  padding: 0.2rem;
   background-color: #fff;
   border-radius: 20px;
   color: #000;
 }
 #nav ul {
+  align-items: center;
   list-style: none;
 }
 #nav ul li {
@@ -33,6 +109,7 @@ footer a, footer h4, #nav ul a, #nav a, #nav span {
 
 .card-group .card {
   margin-bottom: 0% !important;
+  align-self: center;
 }
 
 @media only screen and (min-width: 600px) {
